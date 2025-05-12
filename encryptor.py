@@ -115,7 +115,7 @@ class PDFEncryptor(QWidget):
                     
                 password = str(row['password'])
                 input_path = os.path.join(self.pdf_folder, filename)
-                output_path = os.path.join(self.output_folder, f"protected_{filename}")
+                output_path = os.path.join(self.output_folder, f"{filename}")
 
                 if not os.path.exists(input_path):
                     results.append({'filename': filename, 'status': 'ไม่พบไฟล์ PDF'})
