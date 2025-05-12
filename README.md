@@ -13,7 +13,7 @@
 ├── encryptor.py         # ไฟล์หลัก PyQt GUI
 ├── README.md            # คู่มือการใช้งาน
 ├── icon.png             # ไอคอนโปรแกรม
-├── requirements.txt     # รายการไลบรารี (ดูด้านล่าง)
+├── requirements.txt     # รายการไลบรารี
 └── dist/
     └── encryptor.exe    # แอป .exe ที่สร้างแล้ว
 ```
