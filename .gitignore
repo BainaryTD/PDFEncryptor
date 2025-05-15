@@ -1,3 +1,5 @@
 venv
 *.spec
 /build
+.env
+__pycache__
