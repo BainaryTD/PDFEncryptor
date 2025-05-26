@@ -97,7 +97,7 @@ class PDFEncryptor(QWidget):
             return
 
         try:
-            df = pd.read_excel(self.excel_path)
+            df = pd.read_excel(self.excel_path, dtype={'filename': str, 'password': str})
             if 'filename' not in df.columns or 'password' not in df.columns:
                 self.status_label.setText("Excel ต้องมีคอลัมน์ filename และ password")
                 self.status_label.setStyleSheet("color: red;")
