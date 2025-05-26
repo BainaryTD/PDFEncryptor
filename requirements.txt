@@ -2,3 +2,5 @@ PyQt5
 pandas
 PyPDF2
 openpyxl
+requests 
+beautifulsoup4 
