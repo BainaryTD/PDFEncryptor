@@ -1,0 +1,26 @@
+name: Next.js Build Check
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check NEXT_PUBLIC_URL_BASE
+        run: |
+          echo "Checking NEXT_PUBLIC_URL_BASE..."
+          if [ -z "$NEXT_PUBLIC_URL_BASE" ]; then
+            echo "❌ NEXT_PUBLIC_URL_BASE is not set!"
+            exit 1
+          else
+            echo "✅ NEXT_PUBLIC_URL_BASE is set to: $NEXT_PUBLIC_URL_BASE"
+          fi
+        env:
+          NEXT_PUBLIC_URL_BASE: ${{ secrets.NEXT_PUBLIC_URL_BASE }}
