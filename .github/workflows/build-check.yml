@@ -23,4 +23,4 @@ jobs:
             echo "✅ NEXT_PUBLIC_URL_BASE is set to: $NEXT_PUBLIC_URL_BASE"
           fi
         env:
-          NEXT_PUBLIC_URL_BASE: ${{ secrets.NEXT_PUBLIC_URL_BASE }}
+          NEXT_PUBLIC_URL_BASE: ${{ .env.NEXT_PUBLIC_URL_BASE }}
